@@ -49,10 +49,10 @@ body.article-page {
 		div.content-image {
 			@include make-col-ready();
 
-			@extend .order-lg-last;
+			@extend .order-sm-last;
 			@extend .order-first;
 
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(sm) {
 				@include make-col(4);
 			}
 		}
@@ -62,7 +62,7 @@ body.article-page {
 
 			@extend .align-items-start;
 
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(sm) {
 				@include make-col(8);
 			}
 		}
