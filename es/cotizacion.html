@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z39E7KS753"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Z39E7KS753');
+</script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Cotización - Camila Balboa</title>
+
+<meta property="og:title" content="Obtén una cotización">
+<meta name="description" content="Obtén una cotización personalizada adaptada a tus necesidades">
+<meta property="og:description" content="Obtén una cotización personalizada adaptada a tus necesidades">
+<meta property="og:image" content="https://www.camilabalboa.com/images/thumbnail.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_US">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/library/bootstrap.bundle.min.js" async></script>
+</head>
+<body>
+<script src="/scripts/recaptcha.js" defer async></script>
+<script src="https://www.google.com/recaptcha/api.js?hl=es" defer async></script>
+<header>
+<nav class="navbar navbar-dark navbar-expand-sm">
+<div class="container">
+<a class="navbar-brand fw-semibold" href="/es">Camila Balboa</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/es">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/es/cotizacion">Cotización</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/es/comunicate">Comunícate</a></li>
+<li class="nav-item dropdown-center">
+<button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center h-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+<span class="me-2 d-sm-none">Idioma</span>
+<img class="rounded" width="16px" height="16px" src="/images/languages/es.png">
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item d-flex align-items-center" href="/en"><img class="me-2" width="16px" height="16px" src="/images/languages/en.png" alt="en">English</a></li>
+<li><a class="dropdown-item d-flex align-items-center" href="/es"><img class="me-2" width="16px" height="16px" src="/images/languages/es.png" alt="es">Español</a></li>
+
+</ul>
+</li></ul>
+</div>
+</div>
+</nav>
+</header><div class="container my-5">
+<h1 class="display-4">Obtén una cotización</h1>
+<p>Obtén una cotización personalizada adaptada a tus necesidades al completar el formulario a continuación.
+Simplemente proporciona tu información de contacto, junto con algunos detalles sobre el tipo de cobertura de seguro que estás buscando, y me pondré en contacto contigo de manera oportuna con una cotización completa.</p>
+<form id="quoteForm" action="http://localhost:5010/camilabalboa.com?returnUrl=es/quote_requested" method="POST" class="row g-3 my-3">
+<input type="hidden" name="Type" value="Quote request">
+<input type="hidden" name="Locale Code" value="es">
+<div class="col-lg-4">
+<label for="fullName" class="form-label">Nombre completo</label>
+<input id="fullName" type="text" class="form-control" name="Full Name" required>
+</div>
+<div class="col-lg-4">
+<label for="email" class="form-label">Correo electrónico</label>
+<input id="email" type="text" inputmode="email" class="form-control" name="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+</div>
+<div class="col-lg-4">
+<label for="phone" class="form-label">Número de teléfono <span class="fw-light text-muted">(Opcional)</span></label>
+<input id="phone" type="text" inputmode="tel" class="form-control" name="Phone Number">
+</div>
+<div class="col-12">
+<label for="message" class="form-label">Mensaje <span class="fw-light text-muted">(Opcional)</span></label>
+<textarea class="form-control" maxlength="2000" rows="5" name="Message"></textarea>
+</div>
+<div class="col-12 text-center">
+<div class="recaptcha-container"><div
+class="g-recaptcha"
+data-sitekey="6LfxkMAmAAAAAI15tcaHqVH6Zt72yECCPp_5C9JY"
+data-theme="dark"
+data-callback="onPassed"
+data-expired-callback="onExpired"
+data-error-callback="onError"
+></div></div>
+</div>
+<div class="col text-center">
+<input type="submit" value="Enviar" class="btn btn-lg btn-primary" disabled>
+</div>
+</form>
+</div>
+<footer>
+<div class="container">
+<div class="row gy-1">
+<div class="col-12">
+<ul class="nav justify-content-center">
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/es">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/es/cotizacion">Cotización</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/es/comunicate">Comunícate</a></li></ul>
+</div>
+<div class="col-12 col-sm-8 text-muted text-center text-sm-start">
+<ul class="list-unstyled">
+<li><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:7866604610">(786) 660-4610</a></li>
+<li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@camilabalboa.com">contact@camilabalboa.com</a></li>
+</ul>
+</div>
+<div class="col-12 col-sm-4 text-center text-sm-end">
+<ul class="social">
+<li>
+<a href="https://www.instagram.com/insurancesbycamila/" aria-label="Instragram"><i class="fa-brands fa-instagram"></i></a>
+</li>
+<li>
+<a href="https://wa.me/17866604610" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/camilabalboagarcia/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+</li>
+</ul>
+</div>
+<div class="col-12 text-center">
+<span class="text-muted fw-light fs-6">&copy; 2023 Camila Balboa</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

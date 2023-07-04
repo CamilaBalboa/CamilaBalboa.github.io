@@ -1,57 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z39E7KS753"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Z39E7KS753');
+</script><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Camila Balboa</title>
+<title>
+Camila Balboa</title>
 
-<link rel="shortcut icon" type="image/png" href="/favicon.png" />
-<link rel="stylesheet" type="text/css" href="/styles/style.css" />
-<script async defer src="/scripts/jquery/jquery-3.6.0.min.js"></script>
-<script async defer src="/scripts/bootstrap/bootstrap.bundle.min.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/library/bootstrap.bundle.min.js" async></script>
 </head>
-<body class="article-page">
-<nav class="navbar navbar-dark navbar-expand-sm">
-<div class="container">
-<a class="navbar-brand" href="/">Camila Balboa</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNavDropdown">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="/">About</a></li>
-</ul>
+<body>
+<div class="container my-5">
+<h1 class="display-1 text-center">404</h1>
+<p id="message" class="text-center">That page doesn't exists.</p>
+<p class="text-center mt-5"><a href="/en" id="link">Home page</a></p>
 </div>
-</div>
-</nav>
-<main>
-<article>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>404 - Camila Balboa</title>
-<link rel="shortcut icon" type="image/png" href="/favicon.png" />
-<link rel="stylesheet" type="text/css" href="/styles/style.css" />
-<script async defer src="/scripts/jquery/jquery-3.6.0.min.js"></script>
-<script async defer src="/scripts/bootstrap/bootstrap.bundle.min.js"></script>
-</head>
-<body class="error-page">
-<div class="container text-center">
-<h1><strong>404</strong> Not Found</h1>
-<p>Whoops. Looks like the page you requested can't be found.</p>
-</div>
-</body>
-</html>
-</article>
-</main>
-<footer>
-<div class="legal">
-<p>&copy; 2022 Camila Balboa</p>
-</div>
-</footer>
+<script>
+(() => {
+const path = new URL(document.URL).pathname.split("/").splice(1);
+const locale = (() => {
+switch (path[0]) {
+case "en":
+case "es":
+case "pt":
+return path[0];
+default:
+return "en";
+}
+})();
+const update = (message, linkLabel) => {
+document.getElementsByTagName("html")[0].setAttribute("lang", locale);
+document.getElementById("message").innerText = message;
+const link = document.getElementById("link");
+link.innerText = linkLabel;
+link.setAttribute("href", `/${locale}`);
+};
+if (locale === "es") {
+update("Esa página no existe", "Página de inicio");
+}
+else if (locale === "pt") {
+update("Essa página não existe", "Página inicial");
+}
+})();
+</script>
 </body>
 </html>
