@@ -24,6 +24,12 @@ Camila Balboa</title>
 <script src="/library/bootstrap.bundle.min.js" async></script>
 </head>
 <body>
+<script>
+const locale = navigator.language.substr(0, 2);
+if (["en", "es"].includes(locale)) {
+document.location.replace(`/${locale}/`);
+}
+</script>
 <aside class="hero">
 <div class="pattern">
 <header>
@@ -159,7 +165,7 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
 <div class="section-wrapper">
 <div class="container my-5">
 <h2 class="display-4">FAQs</h2>
-<p>Got questions about insurance? Check out my FAQ section for quick answers to common queries—covering everything from coverage types to policy selection and claims—helping you navigate the insurance landscape with ease.</p>
+<p>Have questions about insurance? Check out my FAQ section for quick answers to common queries—covering everything from coverage types to policy selection and claims—helping you navigate the insurance landscape with ease.</p>
 <div class="accordion" id="accordionFaq">
 
 <div class="accordion-item">
