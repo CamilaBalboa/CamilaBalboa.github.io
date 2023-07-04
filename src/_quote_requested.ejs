@@ -1,0 +1,13 @@
+<%- partial("_header", {
+	language: language,
+}); _%>
+
+<div class="container">
+	<h1 class="display-4"><%= language.headline %></h1>
+	<p><%= language.message.join("\n") %></p>
+	<p class="text-center my-3">
+		<a class="btn btn-primary" href="/<%= language.locale %>"><%= language.homePage %></a>
+	</p>
+</div>
+
+<%- partial("_footer"); _%>

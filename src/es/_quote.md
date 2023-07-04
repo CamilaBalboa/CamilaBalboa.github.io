@@ -1,0 +1,2 @@
+Obtén una cotización personalizada adaptada a tus necesidades al completar el formulario a continuación.
+Simplemente proporciona tu información de contacto, junto con algunos detalles sobre el tipo de cobertura de seguro que estás buscando, y me pondré en contacto contigo de manera oportuna con una cotización completa.

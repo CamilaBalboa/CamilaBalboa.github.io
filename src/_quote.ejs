@@ -1,0 +1,53 @@
+<script src="/scripts/recaptcha.js" defer async></script>
+<script src="<%- `https://www.google.com/recaptcha/api.js?hl=${language.locale}` %>" defer async></script>
+
+<%- partial("_header", {
+	language: language,
+}); _%>
+
+<div class="container my-5">
+	<h1 class="display-4"><%= language.headline %></h1>
+	<%- partial(`${language.locale}/_quote`); _%>
+
+	<form id="quoteForm" action="<%= `${quoteFormSubmitUrl}?returnUrl=${language.locale}/${returnUrl}` %>" method="POST" class="row g-3 my-3">
+		<input type="hidden" name="Type" value="Quote request">
+		<input type="hidden" name="Locale Code" value="<%= language.locale %>">
+
+		<div class="col-lg-4">
+			<label for="fullName" class="form-label"><%= language.form_fullName %></label>
+			<input id="fullName" type="text" class="form-control" name="Full Name" required>
+		</div>
+
+		<div class="col-lg-4">
+			<label for="email" class="form-label"><%= language.form_email %></label>
+			<input id="email" type="text" inputmode="email" class="form-control" name="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+		</div>
+
+		<div class="col-lg-4">
+			<label for="phone" class="form-label"><%= language.form_phone %> <span class="fw-light text-muted"><%= language.form_optional %></span></label>
+			<input id="phone" type="text" inputmode="tel" class="form-control" name="Phone Number">
+		</div>
+
+		<div class="col-12">
+			<label for="message" class="form-label"><%= language.form_message %> <span class="fw-light text-muted"><%= language.form_optional %></span></label>
+			<textarea class="form-control" maxlength="2000" rows="5" name="Message"></textarea>
+		</div>
+
+		<div class="col-12 text-center">
+			<div class="recaptcha-container"><div
+				class="g-recaptcha"
+				data-sitekey="6LfxkMAmAAAAAI15tcaHqVH6Zt72yECCPp_5C9JY"
+				data-theme="dark"
+				data-callback="onPassed"
+				data-expired-callback="onExpired"
+				data-error-callback="onError"
+			></div></div>
+		</div>
+
+		<div class="col text-center">
+			<input type="submit" value="<%= language.form_submit %>" class="btn btn-lg btn-primary" disabled>
+		</div>
+	</form>
+</div>
+
+<%- partial("_footer"); _%>

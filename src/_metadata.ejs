@@ -1,0 +1,20 @@
+<%
+	const getMetadata = () => {
+		const path = [...current.path];
+
+		if (path.length <= 0) {
+			return;
+		}
+
+		path[path.length - 1] = `_metadata.${path[path.length - 1]}`;
+
+		const content = partial(path.join("/"));
+
+		return JSON.parse(content);
+	};
+%>
+<%-
+	partial("_snippets/metadata", {
+		metadata: getMetadata()
+	});
+%>

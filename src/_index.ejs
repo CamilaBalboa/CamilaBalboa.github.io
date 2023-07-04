@@ -1,0 +1,140 @@
+<%
+	const getLink = (linkKey) => {
+		return `/${language.locale}/${links[linkKey]}`;
+	};
+
+	const localizedPartial = (path) => {
+		return partial(`${language.locale}/${path}`)
+	};
+_%>
+<aside class="hero">
+	<div class="pattern">
+		<header>
+			<nav class="navbar navbar-expand-sm" data-bs-theme="dark">
+				<div class="container">
+					<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-center">
+						<ul class="navbar-nav">
+							<%- localizedPartial("_navItems"); _%>
+							<%- partial("_languageSelector") %>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div class="container fs-3">
+			<div class="row col-cols">
+				<div class="text-center text-lg-start col-lg-8 align-self-center hero-headline">
+					<h1 class="display-1 fw-bolder my-3">
+						<span class="text-nowrap">Camila Balboa</span>
+					</h1>
+					<%- localizedPartial("_heroText"); _%>
+					<p class="my-4">
+						<a class="btn btn-primary btn-lg" href="<%= getLink("quote"); _%>"><%= language.get_quote %></a>
+					</p>
+				</div>
+				<div class="text-lg-end col-lg-4 align-self-end order-lg-first">
+					<picture>
+						<source srcset="/images/profile.webp">
+						<img src="/images/profile.png" alt="Camila Balboa" class="img-fluid">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</aside>
+
+<div class="section-wrapper">
+	<section class="container my-5">
+		<div class="row">
+			<h2 class="display-4"><%= language.section_about %></h2>
+		</div>
+		<div class="row">
+			<%- localizedPartial("_about"); _%>
+		</div>
+	</section>
+</div>
+
+<div class="section-wrapper">
+	<section class="container my-5">
+		<div class="row">
+			<h2 class="display-4"><%= language.section_products %></h2>
+			<p><%= language.section_products_description %></p>
+		</div>
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-3 mt-3">
+			<div class="col"><div class="card h-100">
+				<div class="card-body">
+					<div class="text-center" style="font-size: 3rem;"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></div>
+					<h3 class="card-title text-center"><%= language.product_health %></h3>
+					<p class="card-text text-muted fs-6"><%= language.product_health_description %></p>
+				</div>
+			</div></div>
+
+			<div class="col"><div class="card h-100">
+				<div class="card-body">
+					<div class="text-center" style="font-size: 3rem;"><i class="fa fa-heartbeat" aria-hidden="true"></i></div>
+					<h3 class="card-title text-center"><%= language.product_life %></h3>
+					<p class="card-text text-muted fs-6"><%= language.product_life_description %></p>
+				</div>
+			</div></div>
+
+			<div class="col"><div class="card h-100">
+				<div class="card-body">
+					<div class="text-center" style="font-size: 3rem;"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
+					<h3 class="card-title text-center"><%= language.product_supplemental %></h3>
+					<p class="card-text text-muted fs-6"><%= language.product_supplemental_description %></p>
+				</div>
+			</div></div>
+
+			<div class="col"><div class="card h-100">
+				<div class="card-body">
+					<div class="text-center" style="font-size: 3rem;"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+					<h3 class="card-title text-center"><%= language.product_business %></h3>
+					<p class="card-text text-muted fs-6"><%= language.product_business_description %></p>
+				</div>
+			</div></div>
+		</div>
+		<div class="row">
+			<div class="col text-center mt-5">
+				<a class="btn btn-primary" href="<%= getLink("quote"); _%>"><%= language.get_quote %></a>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="section-wrapper">
+	<section class="container my-5">
+		<div class="row">
+			<h2 class="display-4"><%= language.licenses %></h2>
+			<%- localizedPartial("_licenses"); _%>
+		</div>
+		<div class="row">
+			<ul class="badge-list">
+				<li>Alaska</li>
+				<li>Arizona</li>
+				<li>California</li>
+				<li>Florida</li>
+				<li>Kentucky</li>
+				<li>Minnesota</li>
+				<li>Mississippi</li>
+				<li>New Mexico</li>
+				<li>North Carolina</li>
+				<li>Ohio</li>
+				<li>Utah</li>
+			</ul>
+		</div>
+	</section>
+</div>
+
+<div class="section-wrapper">
+	<div class="container my-5">
+		<h2 class="display-4"><%= language.section_faqs %></h2>
+		<%- localizedPartial("_faq"); _%>
+	</div>
+</div>
+
+<%- partial("_footer") %>

@@ -1,0 +1,11 @@
+<%=
+	(() => {
+		const supportedLanguages = ["en", "es", "pt"];
+
+		if (supportedLanguages.includes(current.path[0])) {
+			return current.path[0];
+		}
+
+		return "en";
+	})();
+-%>

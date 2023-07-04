@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="<%= partial("_locale") %>" data-bs-theme="dark">
+	<head>
+		<%- partial("_googleAnalytics"); _%>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><%= partial("_title"); %></title>
+
+		<%- partial("_metadata"); %>
+		<%- partial("_head_import"); %>
+	</head>
+	<body>
+		<%- yield %>
+	</body>
+</html>

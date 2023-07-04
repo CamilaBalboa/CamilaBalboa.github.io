@@ -1,0 +1,58 @@
+<%-
+	(function() {
+		if (!metadata) {
+			return;
+		}
+
+		const output = [];
+
+		const writeMeta = function(attributes) {
+			output.push("<meta");
+
+			Object
+				.keys(attributes)
+				.forEach(key => {
+					output.push(` ${key}="${attributes[key]}"`);
+				});
+
+			output.push(">\n");
+		};
+
+		if (metadata.title) {
+			writeMeta({
+				property: "og:title",
+				content: metadata.title
+			});
+		}
+
+		if (metadata.description) {
+			writeMeta({
+				name: "description",
+				content: metadata.description
+			});
+			writeMeta({
+				property: "og:description",
+				content: metadata.description
+			});
+		}
+
+		if (metadata.image) {
+			writeMeta({
+				property: "og:image",
+				content: metadata.image
+			});
+		}
+
+		writeMeta({
+			property: "og:type",
+			content: "website"
+		});
+
+		writeMeta({
+			property: "og:locale",
+			content: metadata.locale || "en_US"
+		});
+
+		return output.join("");
+	}());
+%>

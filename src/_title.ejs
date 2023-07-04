@@ -1,0 +1,29 @@
+<%
+	const getMetadata = () => {
+		const path = [...current.path];
+
+		if (path.length <= 0) {
+			return;
+		}
+
+		path[path.length - 1] = `_metadata.${path[path.length - 1]}`;
+
+		const content = partial(path.join("/"));
+
+		return JSON.parse(content);
+	};
+%>
+<%=
+	(function() {
+		const siteTitle = "Camila Balboa";
+
+		const metadata = getMetadata() || {};
+
+		if (typeof metadata.pageTitle === "string") {
+			return metadata.pageTitle + " - " + siteTitle;
+		}
+		else {
+			return siteTitle;
+		}
+	}());
+%>

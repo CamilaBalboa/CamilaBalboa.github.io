@@ -1,0 +1,14 @@
+// This is hack to get reCAPTCHA to look right since for some reason it shows a white background
+// on the edges of the iframe.
+div.recaptcha-container {
+	display: inline-block;
+	overflow: hidden;
+	width: 298px;
+	height: 74px;
+	text-align: left;
+
+	iframe {
+		border-radius: 5px;
+		margin: -1px 0 0 -2px;
+	}
+}

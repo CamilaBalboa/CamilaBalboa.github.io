@@ -1,0 +1,38 @@
+<div class="container my-5">
+	<h1 class="display-1 text-center">404</h1>
+	<p id="message" class="text-center">That page doesn't exists.</p>
+	<p class="text-center mt-5"><a href="/en" id="link">Home page</a></p>
+</div>
+<script>
+	(() => {
+		const path = new URL(document.URL).pathname.split("/").splice(1);
+
+		const locale = (() => {
+			switch (path[0]) {
+				case "en":
+				case "es":
+				case "pt":
+					return path[0];
+
+				default:
+					return "en";
+			}
+		})();
+
+		const update = (message, linkLabel) => {
+			document.getElementsByTagName("html")[0].setAttribute("lang", locale);
+			document.getElementById("message").innerText = message;
+
+			const link = document.getElementById("link");
+			link.innerText = linkLabel;
+			link.setAttribute("href", `/${locale}`);
+		};
+
+		if (locale === "es") {
+			update("Esa página no existe", "Página de inicio");
+		}
+		else if (locale === "pt") {
+			update("Essa página não existe", "Página inicial");
+		}
+	})();
+</script>
