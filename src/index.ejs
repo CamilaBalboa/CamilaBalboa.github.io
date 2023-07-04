@@ -1,1 +1,11 @@
-<%- partial("en/index") _%>
+<script>
+	const locale = navigator.language.substr(0, 2);
+
+	if (["en", "es"].includes(locale)) {
+		document.location.replace(`/${locale}/`);
+	}
+</script>
+<%-
+	// This needs to be here for crawlers and bots.
+	partial("en/index");
+_%>
