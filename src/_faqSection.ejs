@@ -12,11 +12,11 @@ _%>
 	<% items.forEach((item) => { %>
 
 	<div class="accordion-item">
-		<h2 class="accordion-header">
+		<h3 class="accordion-header">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<%= getId(); %>" aria-expanded="false" aria-controls="<%= getId(); %>">
 				<strong><%= item.question %></strong>
 			</button>
-		</h2>
+		</h3>
 		<div id="<%= getId(); %>" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
 			<div class="accordion-body">
 				<%= item.answer %>
