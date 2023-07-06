@@ -39,3 +39,5 @@ npm run build
 This project is setup to automatically deploy whenever a commit is pushed to the `master` branch of this repository <https://github.com/CamilaBalboa/CamilaBalboa.github.io.git> using Github Actions.
 
 To alter this behavior, edit this file: `.github/workflows/deploy.yml`.
+
+After the website is deploy, run `seo-ping.sh` to ping the most popular search engines about changes to the sitemap.
