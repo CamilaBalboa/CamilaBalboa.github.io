@@ -4,6 +4,8 @@
 			return;
 		}
 
+		const baseUrl = "https://www.camilabalboa.com";
+
 		const output = [];
 
 		const writeMeta = function(attributes) {
@@ -52,6 +54,10 @@
 			property: "og:locale",
 			content: metadata.locale || "en_US"
 		});
+
+		if (metadata.canonical) {
+			output.push(`<link rel="canonical" href="${baseUrl}/${metadata.canonical}" />`)
+		}
 
 		return output.join("");
 	}());
