@@ -19,8 +19,11 @@
 
 		const metadata = getMetadata() || {};
 
-		if (typeof metadata.pageTitle === "string") {
-			return metadata.pageTitle + " - " + siteTitle;
+		if (metadata.bypassSiteTitle) {
+			return metadata.pageTitle;
+		}
+		else if (typeof metadata.pageTitle === "string") {
+			return `${metadata.pageTitle} - ${siteTitle}`;
 		}
 		else {
 			return siteTitle;
