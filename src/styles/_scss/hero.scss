@@ -1,5 +1,5 @@
 aside.hero {
-	$gradient-color-end: change-color($primary, $lightness: 25%);
+	$gradient-color-end: change-color($primary, $lightness: 32%);
 	$gradient-color-start: desaturate(shift-color($gradient-color-end, 30%), 2%);
 
 	background-color: lighten($gradient-color-end, 10%);
