@@ -1,0 +1,1 @@
+Possuo as qualificações e certificações necessárias para atender clientes em estados específicos, garantindo que posso oferecer orientação especializada e assistência adaptada aos requisitos da sua região.

@@ -6,6 +6,7 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://www.camilabalboa.com/"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/"/>
   <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/"/>
   <priority>1.00</priority>
 </url>
 <url>
@@ -13,18 +14,21 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://www.camilabalboa.com/"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/"/>
   <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.camilabalboa.com/en/quote</loc>
   <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/quote"/>
   <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/cotizacion"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/cotacao"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.camilabalboa.com/en/contact</loc>
   <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/contact"/>
   <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/comunicate"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/contato"/>
   <priority>0.70</priority>
 </url>
 <url>
@@ -32,18 +36,43 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://www.camilabalboa.com/"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/"/>
   <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.camilabalboa.com/es/cotizacion</loc>
   <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/quote"/>
   <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/cotizacion"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/cotacao"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.camilabalboa.com/es/comunicate</loc>
   <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/contact"/>
   <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/comunicate"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/contato"/>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.camilabalboa.com/pt/</loc>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.camilabalboa.com/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/"/>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.camilabalboa.com/pt/cotacao</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/quote"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/cotizacion"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/cotacao"/>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.camilabalboa.com/pt/contato</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.camilabalboa.com/en/contact"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://www.camilabalboa.com/es/comunicate"/>
+  <xhtml:link rel="alternate" hreflang="pt" href="https://www.camilabalboa.com/pt/contato"/>
   <priority>0.70</priority>
 </url>
 
