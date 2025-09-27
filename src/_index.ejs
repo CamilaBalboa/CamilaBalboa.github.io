@@ -39,8 +39,11 @@ _%>
 				</div>
 				<div class="text-lg-end col-lg-4 align-self-end">
 					<picture>
-						<source srcset="/images/profile.webp">
-						<img src="/images/profile.png" alt="Camila Balboa" class="img-fluid">
+						<source media="(max-width: 400px)" srcset="/images/profile-400.webp 400w">
+						<source media="(max-width: 600px)" srcset="/images/profile-600.webp 600w">
+						<source media="(max-width: 1200px)" srcset="/images/profile-1200.webp 1200w">
+						<source media="(max-width: 2400px)" srcset="/images/profile-2400.webp 2400w">
+						<img src="/images/profile-1200.png" alt="Camila Balboa" class="img-fluid">
 					</picture>
 				</div>
 			</div>
