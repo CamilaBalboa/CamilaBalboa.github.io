@@ -1,6 +1,6 @@
 // Theme colors
-$primary:       hsl(220, 60%, 50%);
-$secondary:     desaturate($primary, 10%);
+$primary:       hsl(163, 54%, 18%);
+$secondary:     hsl(42, 8%, 83%);
 $success:       hsl(140, 50%, 40%);
 $info:          hsl(190, 50%, 40%);
 $warning:       hsl(45, 50%, 40%);
@@ -35,8 +35,6 @@ $h6-font-size: $font-size-base * 0.9;
 
 $card-bg: none;
 $card-border-radius: 0.5em;
-
-$body-bg: $dark;
 
 @import "../../library/_bootstrap/bootstrap.scss";
 
