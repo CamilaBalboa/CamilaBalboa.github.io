@@ -1,6 +1,6 @@
 @mixin font-face-inter-varient ($font-weight) {
 	@font-face {
-		font-family: "Inter";
+		font-family: "Inter", Arial, sans-serif;
 		font-style: normal;
 		font-display: swap;
 		font-weight: $font-weight;
