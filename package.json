@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My personal website",
   "scripts": {
-    "install": "npm install -g harp",
+    "install": "npm install -g chalk@4 harp",
     "build": "harp src dist",
     "dev": "harp src --port 3000"
   },
