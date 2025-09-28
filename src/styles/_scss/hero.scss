@@ -1,6 +1,6 @@
 aside.hero {
-	$gradient-color-end: change-color($primary, $lightness: 18%);
-	$gradient-color-start: desaturate(shift-color($gradient-color-end, 30%), 2%);
+	$gradient-color-end: change-color($primary, $lightness: 25%);
+	$gradient-color-start: desaturate(shift-color($gradient-color-end, 20%), 10%);
 
 	background-color: lighten($gradient-color-end, 10%);
 	background-image: linear-gradient(180deg,
@@ -36,6 +36,6 @@ aside.hero {
 	}
 
 	.call-to-action {
-		background-color: lighten($color: $primary, $amount: 5%);
+		--bs-btn-bg: #{ lighten($color: $primary, $amount: 8%) };
 	}
 }
