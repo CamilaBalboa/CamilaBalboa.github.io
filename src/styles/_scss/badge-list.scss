@@ -1,5 +1,6 @@
 ul.badge-list {
 	list-style: none;
+	padding-left: 0;
 
 	@extend .text-center;
 	@extend .text-lg-start;
