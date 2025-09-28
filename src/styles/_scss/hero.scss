@@ -1,5 +1,5 @@
 aside.hero {
-	$gradient-color-end: change-color($primary, $lightness: 25%);
+	$gradient-color-end: change-color($primary, $lightness: 18%);
 	$gradient-color-start: desaturate(shift-color($gradient-color-end, 30%), 2%);
 
 	background-color: lighten($gradient-color-end, 10%);
@@ -13,8 +13,8 @@ aside.hero {
 
 	@include media-breakpoint-up(lg) {
 		background: linear-gradient(75deg,
-			$gradient-color-end 20%,
-			$gradient-color-start 90%
+			$gradient-color-start 20%,
+			$gradient-color-end 80%
 		);
 	}
 
