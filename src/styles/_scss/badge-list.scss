@@ -2,7 +2,7 @@ ul.badge-list {
 	list-style: none;
 
 	@extend .text-center;
-	@extend .text-md-start;
+	@extend .text-lg-start;
 
 	&-lg {
 		font-size: 2rem;
