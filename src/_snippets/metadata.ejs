@@ -1,3 +1,6 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <%-
 	(function() {
 		if (!metadata) {
@@ -20,12 +23,10 @@
 			output.push(">\n");
 		};
 
-		if (metadata.title) {
-			writeMeta({
-				property: "og:title",
-				content: metadata.title
-			});
-		}
+		writeMeta({
+			property: "og:title",
+			content: metadata.title || partial("title"),
+		});
 
 		if (metadata.description) {
 			writeMeta({
@@ -38,12 +39,10 @@
 			});
 		}
 
-		if (metadata.image) {
-			writeMeta({
-				property: "og:image",
-				content: metadata.image
-			});
-		}
+		writeMeta({
+			property: "og:image",
+			content: metadata.image || `${baseUrl}/images/thumbnail.png`
+		});
 
 		writeMeta({
 			property: "og:type",
@@ -51,8 +50,18 @@
 		});
 
 		writeMeta({
+			property: "og:site_name",
+			content: "Camila Balboa"
+		});
+
+		writeMeta({
 			property: "og:locale",
 			content: metadata.locale || "en_US"
+		});
+
+		writeMeta({
+			name: "theme-color",
+			content: "#11392e",
 		});
 
 		if (metadata.canonical) {
