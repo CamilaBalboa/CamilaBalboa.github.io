@@ -43,6 +43,14 @@
 			property: "og:image",
 			content: metadata.image || `${baseUrl}/images/thumbnail.png`
 		});
+		writeMeta({
+			property: "og:image:width",
+			content: "1280",
+		});
+		writeMeta({
+			property: "og:image:height",
+			content: "720",
+		});
 
 		writeMeta({
 			property: "og:type",
@@ -64,9 +72,14 @@
 			content: "#11392e",
 		});
 
-		if (metadata.canonical) {
-			output.push(`<link rel="canonical" href="${baseUrl}/${metadata.canonical}" />`)
-		}
+		const path = `${baseUrl}/${metadata.canonical || partial("currentPath")}`;
+
+		writeMeta({
+			property: "og:url",
+			content: path,
+		});
+
+		output.push(`<link rel="canonical" href="${path}" />`);
 
 		return output.join("");
 	}());
